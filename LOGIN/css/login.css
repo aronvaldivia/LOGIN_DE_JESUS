@@ -1,0 +1,523 @@
+/*==========================================================
+    LOGIN - SANTA ROSA DE QUIVES
+==========================================================*/
+
+/*==============================
+    RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#0B5D3B;
+    --primary-dark:#08472D;
+    --secondary:#F2C230;
+
+    --text:#444;
+    --light:#777;
+
+    --background:#F6F7F8;
+
+    --border:#DDDDDD;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    overflow:hidden;
+
+}
+
+/*==============================
+    CONTENEDOR
+==============================*/
+
+.container{
+
+    display:flex;
+
+    width:100%;
+
+    height:100vh;
+
+}
+
+/*==============================
+    PANEL IZQUIERDO
+==============================*/
+
+.left-panel{
+
+    width:50%;
+
+    position:relative;
+
+    background-image:url("../images/login-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    overflow:hidden;
+
+}
+
+/* Oscurece la imagen */
+
+.overlay-dark{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.40),
+
+        rgba(0,0,0,.24)
+
+    );
+
+}
+
+/*==============================
+    CONTENIDO IZQUIERDO
+==============================*/
+
+.overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.content{
+
+    margin-left:60px;
+
+    max-width:420px;
+
+}
+
+.logo{
+
+    width:250px;
+
+    margin-bottom:150px;
+
+}
+
+/*==============================
+    TITULO
+==============================*/
+
+h1{
+
+    color:#FFF;
+
+    font-size:50px;
+
+    font-weight:500;
+
+    line-height:58px;
+
+    text-shadow:0 5px 18px rgba(0,0,0,.40);
+
+}
+
+h1 span{
+
+    display:block;
+
+    font-size:72px;
+
+    font-weight:700;
+
+}
+
+/*==============================
+    LINEA
+==============================*/
+
+.line{
+
+    width:75px;
+
+    height:5px;
+
+    background:var(--secondary);
+
+    border-radius:50px;
+
+    margin:28px 0;
+
+}
+
+/*==============================
+    TEXTO
+==============================*/
+
+.content p{
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:34px;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.40);
+
+}
+
+/*==============================
+    VOLVER
+==============================*/
+
+.back-home{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:40px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.back-home i{
+
+    font-size:20px;
+
+}
+
+.back-home:hover{
+
+    color:black;
+
+    transform:translateX(-5px);
+
+}
+
+/*==============================
+    PANEL DERECHO
+==============================*/
+
+.right-panel{
+
+    width:55%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*==============================
+    LOGIN
+==============================*/
+
+.login-card{
+
+    width:440px;
+    height: 700px;
+    background:white;
+
+    border-radius:24px;
+
+    padding:25px;
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.08);
+
+}
+
+/*==============================
+    ICONO
+==============================*/
+
+.login-icon{
+
+    width:250px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+  
+
+}
+
+.login-icon i{
+
+    color:var(--primary);
+
+    font-size:34px;
+
+}
+
+/*==============================
+    TITULO LOGIN
+==============================*/
+
+h2{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    color:var(--primary);
+
+    font-size:42px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    margin-bottom:35px;
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+/*==============================
+    FORM
+==============================*/
+
+.form-group{
+
+    margin-bottom:22px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-group{
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    transition:.25s;
+
+}
+
+.input-group:focus-within{
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+        0 0 0 4px rgba(11,93,59,.08);
+
+}
+
+.input-group i{
+
+    color:#888;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:15px;
+
+    font-size:15px;
+
+    background:transparent;
+
+}
+
+/*==============================
+    OJO PASSWORD
+==============================*/
+
+.toggle-password{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+.toggle-password i{
+
+    color:#888;
+
+}
+
+/*==============================
+    OPCIONES
+==============================*/
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+.options a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/*==============================
+    BOTON LOGIN
+==============================*/
+
+.btn-login{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btn-login:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+/*==============================
+    FOOTER
+==============================*/
+
+footer{
+
+    margin-top:20px;
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+/*==============================
+    RESPONSIVE
+==============================*/
+
+@media(max-width:1100px){
+
+    .left-panel{
+
+        display:none;
+
+    }
+
+    .right-panel{
+
+        width:100%;
+
+    }
+
+}
